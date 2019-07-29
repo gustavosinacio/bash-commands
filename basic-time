@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Basic time calculation
+
 endTime=$(date -d "$1 today + 510 minutes" +'%H:%M')
 
 if [ $2 ]; then
