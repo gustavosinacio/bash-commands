@@ -1,0 +1,9 @@
+#!/bin/bash
+
+endTime=$(date -d "$1 today + 510 minutes" +'%H:%M')
+
+if [ $2 ]; then
+endTime=$(date -d "$1 today + $2 minutes" +'%H:%M')
+fi
+
+echo "$endTime"
