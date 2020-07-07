@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+if [ "$1" == "" ]; then
+  echo "USAGE: $0 [hostname] [dbname] [command]";
+else
+  ssh $1 "psql -d $2 -c \"$3\""
+fi
+# echo "$1 $2 $3"
