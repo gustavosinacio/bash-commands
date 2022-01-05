@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# this turns off indexing of files, and should result in a clear slow down of 
+# the fans if mds and/or mds_stores are to blame.
+
+if [ "$1" == "" ]; then
+  echo "use:  switch-mds [on/off]"
+else
+  sudo mdutil -a -i $1
+fi
